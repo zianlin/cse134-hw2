@@ -20,7 +20,7 @@
         <h1>Zian Lin</h1>  
     </header>
     <main>
-        <section>
+        <div>
             <table>
                 <tr>
                     <td>
@@ -45,7 +45,7 @@
                 <a href="index.html#resume">Resume</a>
                 <a href="index.html#contact">Contact</a>
             </nav>
-        </section>
+        </div>
         <hr>
         <section>
             <a id="selected_projects"></a>
@@ -124,7 +124,7 @@
             <h2>
                 Experience
             </h2>
-            <section>
+            <div>
                 <table>
                     <tr>
                         <td>
@@ -138,8 +138,8 @@
                         </td>
                     </tr>
                 </table>
-            </section>
-            <section>
+            </div>
+            <div>
                 <table>
                     <tr>
                         <td>
@@ -155,8 +155,8 @@
                         </td>
                     </tr>
                 </table>
-            </section>
-            <section>
+            </div>
+            <div>
                 <table>
                     <tr>
                         <td>
@@ -171,8 +171,8 @@
                         </td>
                     </tr>
                 </table>
-            </section>
-            <section>
+            </div>
+            <div>
                 <table>
                     <tr>
                         <td>
@@ -188,8 +188,8 @@
                         </td>
                     </tr>
                 </table>
-            </section>
-            <section>
+            </div>
+            <div>
                 <table>
                     <tr>
                         <td>
@@ -205,7 +205,7 @@
                         </td>
                     </tr>
                 </table>
-            </section>
+            </div>
         </section>
         <hr>
         <section>
@@ -288,8 +288,7 @@
             </script>
             <p>An svg with my favorite color is shown below.</p>
             <svg height="100" width="100">
-                <circle cx="50" cy="50" r="40" stroke="black" stroke-width="1" fill="#b178c2" />
-                Sorry, your browser does not support inline SVG.  
+                <circle cx="50" cy="50" r="40" stroke="black" stroke-width="1" fill="#b178c2" /> 
             </svg> 
             <template id = "hidden">
               <h2>Render me with JavaScript!</h2>
@@ -303,7 +302,6 @@
         <table>
             <caption>Get in touch!</caption>
             <colgroup>
-                <col>
                 <col span="2" class="socials">
                 <col span="2" class="emails">
             </colgroup>
@@ -323,37 +321,50 @@
                     <a href="https://github.com/zianlin">GitHub</a>
                 </td>
                 <td>
-                    <a href="mailto: zian67@gmail.com">Professional</a>
+                    <a href="mailto:zian67@gmail.com">Professional</a>
                 </td>
                 <td>
-                    <a href="mailto: z9lin@ucsd.edu">School</a>
+                    <a href="mailto:z9lin@ucsd.edu">School</a>
                 </td>
             </tr>
         </table>
         <br>
-        <form action="mailto: zian67@gmail.com">
+        <form action="mailto:zian67@gmail.com">
             <fieldset>
                 <legend>
                     Contact Form
                 </legend>
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+				
                 <label for="lname">Last Name</label>
                 <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+				
                 <label for="purpose">Purpose?</label>
-                <select id="purpose" name="purpose">
-                    <datalist id="purposes">
-                        <optgroup label = "Work">
-                            <option value="work">Job opportunity</option>
-                            <option value="work">Internship opportunity</option>
-                            <option value="work">Other work-related topic</option>
-                        </optgroup>
-                        <optgroup label = "Personal">
-                            <option value="personal">General inquiry</option>
-                        </optgroup>
-                        <option value="other">Other</option>
-                    </datalist>
+				<input list="purposes" id="purposes_dropdown">
+                <select id="purposes">
+					<optgroup label = "Work">
+						<option value="work">Job opportunity</option>
+						<option value="work">Internship opportunity</option>
+						<option value="work">Other work-related topic</option>
+					</optgroup>
+					<optgroup label = "Personal">
+						<option value="personal">General inquiry</option>
+					</optgroup>
+					<option value="other">Other</option>
                 </select>
+				
+				<label for="company_dropdown">If job opportunity, what kind of position? (optional)</label>
+				<input list="company_positions" id="company_dropdown">
+				<datalist id="company_positions">
+					<option value="Front-end software engineer">SWE</option>
+					<option value="Back-end software engineer">SWE</option>
+					<option value="Full-stack software engineer">SWE</option>
+					<option value="Front-end mobile engineer">Mobile</option>
+					<option value="Back-end mobile engineer">Mobile</option>
+					<option value="Full-stack mobile engineer">Mobile</option>
+				</datalist>
+				
             </fieldset>
             <fieldset>
                 <legend>
